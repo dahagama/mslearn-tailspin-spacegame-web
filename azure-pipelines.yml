@@ -44,7 +44,6 @@ steps:
   parameters:
     buildConfiguration: 'Release'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  condition: succeeded()
+- task: DotNetCoreCLI@2
+  inputs:
     command: 'build'
